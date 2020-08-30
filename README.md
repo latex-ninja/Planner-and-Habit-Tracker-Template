@@ -1,4 +1,10 @@
+# Planner and Habit Tracker Template
+A template to help you create your own custom daily planner or habit tracking system.
+Depending on what you need from it, just print selected pages. For example, if you wanted to use the weekly templates together with the monthly overview, you will want to print the weekly overview for each week of the month and so on.  
 
+(further description and larges images below)
+
+---
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
 		<th><code>Weekdays Sheet</code></th>
@@ -80,11 +86,7 @@
 
 ---
 
-# Planner and Habit Tracker Template
-A template to help you create your own custom daily planner or habit tracking system.
-Depending on what you need from it, just print selected pages. For example, if you wanted to use the weekly templates together with the monthly overview, you will want to print the weekly overview for each week of the month and so on.  
-
----
+# Description
 
 It features:
 * **A weekly tracker in landscape mode.** This weekly template isn't a planner and probably won't replace yours either. You could possibly try but there isn't tons of room for appointments. Might work out if you print it out on an A3 paper or you don't have lots of appointments. Its purpose is more like a tracker for habits and routines. It asks you to note down your daily highlight, has 3 mini journaling prompts, icons for daily tracking. You can interpret the icons liberally to easily track some daily habits. Add ones you like from the `fontawesome` package, remove the ones you don't like.  The boxes in the middle symbolize a morning routine / work startup routine, the other hours of your day blocked in to two 2-3h boxes. Because the idea is that you can't realistically do more than two big tasks in a day, so the template doesn't even give you the choice ;) The last box is a work winddown routine which you should use to check off some of the todos from your email, admin task and guilt hour lists from your weekly overview. That one consciously only has 3 items per category so you're not tempted to spend all your week on admin tasks while conveniantly ignoring / procrastinating on your actual goals. To track whether you did the morning or evening routine, you can for example colour in the boxes you completed, so you'll have a quick overview of wether you're actually doing the routines or not. Oh and there are also little symbols where you can check your energy in the morning and evening, as well as your mood at some point. This might help you spot some patterns, like which types of tasks cause you to end up really drained at the end of the day. 
