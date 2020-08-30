@@ -62,7 +62,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
 		<th><code>Monthly Overview</code></th>
-		<th><code>Template for 20h to learn anything ([`https://first20hours.com/`](https://first20hours.com/))</code></th>
+		<th><code>Template for 20h to learn anything</code></th>
 	</tr>
 	<tr>
 		<td>
