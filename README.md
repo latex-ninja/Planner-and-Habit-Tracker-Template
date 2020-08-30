@@ -22,3 +22,34 @@ Use the template to make it your own and adopt it to your needs. Or just use it 
 Print it out, fill it out and maybe share your experiences with it, so we can update it to make it even better :)
 
 
+# Preview Images 
+
+# Weekdays Sheet
+![Weekdays](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-01.png)
+
+## Weekly Overview
+![Weekly Overview](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-02.png)
+
+## Monthly Overview
+![Monthly Overview](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-03.png)
+
+
+## Template for 20h to learn anything ([`https://first20hours.com/`](https://first20hours.com/))
+![Template for 20h to learn anything](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-04.png)
+
+## 100 Day Challenge Tracker Template
+### Overview Page
+![100 Day Challenge Tracker Template: Overview Page](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-05.png)
+
+### 10 Day Sub-Projects
+![100 Day Challenge Tracker Template: 10 Day Sub-Projects](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-06.png)
+
+
+## 21/90 Project Template
+### Overview
+![21/90 Project Template: Overview](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-16.png)
+
+### Progress Calender (print out to check off the boxes and hang it on the wall or whatever)
+![21/90 Project Template: Progress Calender](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-16.png)
+
+
