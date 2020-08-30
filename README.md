@@ -42,6 +42,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
 		<th><code>Overview Page</code></th>
+		<th><code>10 Day Sub-Projects</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -49,14 +50,6 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 				alt="100 Day Challenge Tracker Template: Overview Page"
 				height="300"/>
 		</td>
-	</tr>			
-</table>
-
-<table width="100%" margin-left="auto" margin-right="auto">
-	<tr>
-		<th><code>10 Day Sub-Projects</code></th>
-	</tr>
-	<tr>
 		<td>
 			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-06.png" 
 				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
@@ -64,6 +57,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 		</td>
 	</tr>			
 </table>
+
 
 
 ### Overview Page
@@ -79,6 +73,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
 		<th><code>Overview</code></th>
+		<th><code>Progress Calender</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -86,14 +81,6 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 				alt="100 Day Challenge Tracker Template: Overview Page"
 				height="300"/>
 		</td>
-	</tr>			
-</table>
-
-<table width="100%" margin-left="auto" margin-right="auto">
-	<tr>
-		<th><code>Progress Calender</code></th>
-	</tr>
-	<tr>
 		<td>
 			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-17.png" 
 				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
