@@ -2,6 +2,8 @@
 A template to help you create your own custom daily planner or habit tracking system.
 Depending on what you need from it, just print selected pages. For example, if you wanted to use the weekly templates together with the monthly overview, you will want to print the weekly overview for each week of the month and so on.  
 
+But the main purpose of this being a LaTeX template is, of course, that you can customize it to fit your own needs!
+
 (further description and larges images below)
 
 ---
