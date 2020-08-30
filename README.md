@@ -1,4 +1,4 @@
-Would you like to start some sort of habit tracking routine but #bujo is too much work, yet planners you can buy include too many elements you don't need? Then I thought this is a job for a LaTeX template ;)
+Would you like to start some sort of habit tracking routine but bullet journaling (`#bujo`) is too much work, yet planners you can buy include too many elements you don't need? I felt exactly like that. Then I thought this is a job for a LaTeX template and here we are now ;)
 
 # Planner and Habit Tracker Template
 A template to help you create your own custom daily planner or habit tracking system.
