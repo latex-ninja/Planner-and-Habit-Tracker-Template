@@ -1,0 +1,675 @@
+\setlength{\parindent}{0pt}
+
+%--------------------------------------------------------------------------------------------
+% VARIOUS PACKAGES  
+%--------------------------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{pdflscape}
+
+%--------------------------------------------------------------------------------------------
+% COLOURS
+%--------------------------------------------------------------------------------------------
+\colorlet{greyedout}{black!20}
+\colorlet{lightgrey}{greyedout!50}
+
+%--------------------------------------------------------------------------------------------
+% TCOLORBOX
+%--------------------------------------------------------------------------------------------
+\usepackage{tcolorbox}
+\tcbset{colback=white,colframe=black!90}
+
+
+%--------------------------------------------------------------------------------------------
+% CHANGE SECTION TITLES
+%--------------------------------------------------------------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}{\huge\sffamily\bfseries}{}{0em}{}[]
+
+\newcommand{\plannerheading}[1]{\subsection*{\MakeUppercase{#1}}}
+\newcommand{\habitlabel}[1]{\MakeUppercase{#1}}
+
+%--------------------------------------------------------------------------------------------
+% FONT, QUOTE
+%--------------------------------------------------------------------------------------------
+\usepackage{fontenc}
+\usepackage[default]{raleway}
+\usepackage{fontawesome}
+\renewenvironment{quote}
+               {\list{\faQuoteLeft\phantom{ }}{\rightmargin\leftmargin}%
+                \item\relax\scriptsize\ignorespaces}
+               {\unskip\unskip\phantom{xx}\faQuoteRight\endlist}
+               
+
+
+
+%--------------------------------------------------------------------------------------------
+% FOOTER NINJA-LOGO
+%--------------------------------------------------------------------------------------------              
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\newcommand{\roundpic}[1]{\begin{figure}[h!]\tikz  \draw [path picture={ \node at (path picture bounding box.center){\includegraphics[height=2cm]{#1}} ;}] (0,1) circle (1) ;\end{figure}}
+
+
+
+%--------------------------------------------------------------------------------------------
+% HABIT TRACKING
+%--------------------------------------------------------------------------------------------    
+
+\newcommand{\habittracker}[4]{ % #1: habit label; #2: fontawesome symbol; #3: repeat X times; #4: colour
+\plannerheading{#1}~%
+\habitsymbols{#2}{#3}{#4}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\habit}[1]{%
+{\huge\color{greyedout}#1~~}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\timebucket}{%
+{\huge\color{greyedout}\faSquareO\faSquareO\faSquareO\faSquareO}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\habitsymbols}[3]{ % #1: fontawesome symbol; #2: repeat X times; #3: colour
+\pgfmathparse{#2 - 1}\foreach \n in {0,...,\pgfmathresult}{~\huge\color{#3} \bfseries #1~}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\habiticon}[3]{%
+\begin{tikzpicture}%
+\draw[draw=none,fill=#2] (0,0) circle (0.5);%
+\node[](icon) at (0,0) {#3\color{white}#1};%
+\end{tikzpicture}
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\smallhabiticon}[3]{%
+\begin{tikzpicture}%
+\draw[draw=none,fill=#2] (0,0) circle (0.3);%
+\node[](icon) at (0,0) {#3\color{white}#1};%
+\end{tikzpicture}
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\bigsymboltracker}[4]{% #1: label; #2 fontawesome symbol; #3 colour; #4 times;
+\plannerheading{#1}~%
+\habitsymbols{\hfill\habiticon{#2}{#3}{\huge}\hfill}{#4}{#3}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\smallsymboltracker}[5]{% #1: label; #2 fontawesome symbol; #3 colour; #4 times; #5: percentage of textwidth
+\begin{minipage}[t]{#5\textwidth}
+\plannerheading{#1}~%
+\habitsymbols{\smallhabiticon{#2}{#3}{\large}\vspace{0.1em}\hspace{0.1em}}{#4}{#3}%
+\end{minipage}\hfill
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\timebox}[1]{
+\tikz\draw[] (0,0) node[fill=white,draw=white] {\Large\color{greyedout}#1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~};
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\batchtask}[1]{
+\tikz\draw[] (0,0) node[fill=white,draw=white] {\large\color{greyedout}#1~~~~~~~~~~~~~~~~~~~~};
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\smalltimebox}[1]{
+\tikz\draw[] (0,0) node[fill=white,draw=white] {\large\color{greyedout}#1~~~~~~~};
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\plannerboxcheck}[2]{
+\begin{tcolorbox}\plannerheading{#1}#2\\[0.5em]
+#2\\[0.5em]
+#2\\[0.5em] \vspace{2em}\end{tcolorbox}
+}
+%--------------------------------------------------------------------------------------------
+\newcommand{\plannerboxplain}[1]{
+\begin{tcolorbox}\habitlabel{#1}\vspace{2em}]\end{tcolorbox}
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\tasklist}[1]{
+\begin{tcolorbox}[colback=white,colframe=greyedout]
+\plannerheading{#1}
+\faCircleO\\[0.5em]
+\faCircleO\\[0.5em]
+\faCircleO\\[0.5em]
+\end{tcolorbox}
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\greyoutline}[1]{
+\begin{tcolorbox}[colback=white,colframe=greyedout]
+#1
+\end{tcolorbox}
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\weekline}{%
+\habitsymbols{\faSquareO}{5}{greyedout}\habitsymbols{\faSquare}{2}{greyedout}%
+}
+\newcommand{\fiveweeks}{%
+\weekline \newline \weekline\newline \weekline\newline \weekline\newline \weekline }
+\newcommand{\twoweeks}{\weekline \newline \weekline }
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\energyrating}{%
+{~|~ \emph{Energy rating:} ~\color{black!40}\Large~\faBatteryQuarter ~~\faBatteryHalf~~\faBatteryThreeQuarters~~\faBatteryFull}%
+}
+%--------------------------------------------------------------------------------------------
+\newcommand{\energyrate}{%
+{\emph{Energy:} %\\[0.2em] 
+~\color{black!40}~\faBatteryQuarter ~~\faBatteryHalf~~\faBatteryThreeQuarters~~\faBatteryFull}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\moodrating}{%
+{~|~ \emph{Mood:} ~\color{black!40}\Large~\faSmileO~~\faMehO~~\faFrownO}%
+}
+%--------------------------------------------------------------------------------------------
+\newcommand{\moodrate}{%
+{\emph{Mood:} ~\color{black!40}~\faSmileO~~\faMehO~~\faFrownO}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\weeklyrating}[1]{%
+\plannerheading{#1}
+\habitsymbols{\faSquareO}{5}{greyedout}\habitsymbols{\faSquare}{2}{greyedout}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\weeklycheckin}[1]{%
+\plannerheading{#1}
+\habitsymbols{\large\faSquareO}{5}{greyedout}\habitsymbols{\large\faSquare}{2}{greyedout}%
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\monthlyrating}[1]{%
+\plannerheading{#1}
+\habitsymbols{\faSquareO}{7}{greyedout} \\[0.5em]
+\habitsymbols{\faSquareO}{7}{greyedout}  \\[0.5em]
+\habitsymbols{\faSquareO}{7}{greyedout} \\[0.5em]
+\habitsymbols{\faSquare}{7}{greyedout}  \\[0.5em]
+\habitsymbols{\faSquare}{2}{greyedout}  \\
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\datefield}{%
+ ~~ ~~~~ / ~~~~ ~~ / ~~~~~~~~~~ }
+
+%--------------------------------------------------------------------------------------------
+% 20h PROJECTS
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\twentyhourproject}[1]{%
+\plannerheading{#1}
+\habitsymbols{\faSquareO}{5}{greyedout}\habitsymbols{\faSquare}{2}{greyedout} \\[0.5em]
+\habitsymbols{\faSquareO}{5}{greyedout}\habitsymbols{\faSquare}{2}{greyedout}  \\[0.5em]
+\habitsymbols{\faSquareO}{5}{greyedout}\habitsymbols{\faSquare}{2}{greyedout} \\[0.5em]
+\habitsymbols{\faSquareO}{5}{greyedout}\habitsymbols{\faSquare}{1}{greyedout}
+}
+
+\newcommand{\twentyhourprojectreview}{
+\hspace{2em}\begin{minipage}[t]{0.35\textwidth}
+\plannerheading{Project:}\vspace{2em}
+
+\twentyhourproject{\faLightbulbO~ 20h to learn anything}
+\vspace{2em}
+
+\plannerheading{Goal:}
+\vspace{2em}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.2\textwidth}
+\vspace{4em}
+\habitlabel{Theory} \\[0.5em]
+\timebucket \\
+\timebucket \\
+
+\habitlabel{Practice} \\[0.5em]
+\timebucket \\
+\timebucket \\
+\timebucket \\
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\plannerheading{What I learned:}
+\habit{(Theory+Practice)}
+\end{minipage}\hfill
+}
+
+%--------------------------------------------------------------------------------------------
+% 100 Days Challenge
+%--------------------------------------------------------------------------------------------
+\newcommand{\tendayschallenge}[3]{
+\bigsymboltracker{#1 of #2}{#3}{greyedout}{10}
+\vspace{1em}
+
+\begin{minipage}[t]{0.7\textwidth}
+\plannerheading{10 Day Goals / Achievements:}
+
+\begin{minipage}[t]{0.45\textwidth}
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\textwidth}
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+\habit{\faCircleO} \\[0.5em]
+
+\end{minipage}\hfill
+\vspace{1.5em}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\plannerheading{What I learned}
+\end{minipage}\hfill
+\hrule 
+\vspace{2em}
+}
+%--------------------------------------------------------------------------------------------
+\newcommand{\onehundreddaychallengetracker}[2]{ % #1: Name of the challenge; #2 fontawesome symbol 
+\section{#1-Challenge  ~~~~~~~~~~~~ Start:}
+
+
+\smallsymboltracker{#1% ~~~~~~~~~~~~ |  ~~~~~~~~~~~~ Begin date:
+}{#2}{greyedout}{100}{0.7}
+\vspace{3em}
+
+\plannerheading{Rewards for completion}
+
+\vspace{5em}
+\plannerheading{Big project for the whole challenge}
+
+\vspace{5em}
+\plannerheading{Subprojects}
+
+\newpage
+\tendayschallenge{10}{#1}{#2}
+\tendayschallenge{20}{#1}{#2}
+\tendayschallenge{30}{#1}{#2}
+\tendayschallenge{40}{#1}{#2}
+\tendayschallenge{50}{#1}{#2}
+
+\tendayschallenge{60}{#1}{#2}
+\tendayschallenge{70}{#1}{#2}
+\tendayschallenge{80}{#1}{#2}
+\tendayschallenge{90}{#1}{#2}
+\tendayschallenge{100}{#1}{#2}
+}
+
+%--------------------------------------------------------------------------------------------
+% LANDSCAPE WEEK
+%--------------------------------------------------------------------------------------------
+\newcommand{\landscapedaily}[1]{
+\begin{tcolorbox}[colback=white,colframe=black]
+\plannerheading{#1}
+\plannerheading{~~~~~ \datefield}
+
+\greyoutline{\plannerheading{\normalsize Highlight (90')} \vspace{2em}{\footnotesize } }
+
+\begin{tcolorbox}[colback=greyedout,colframe=greyedout]
+
+\smalltimebox{\footnotesize 15' L} \smalltimebox{\footnotesize 15' P} 
+
+\smalltimebox{\footnotesize 15' T} \smalltimebox{\footnotesize 15' D} 
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=greyedout,colframe=greyedout]
+%\plannerheading{Time Boxing \& routines} 
+\footnotesize 
+
+5--7 ~|~ 1,5h Wakeup \\[0.5em]
+{\color{black!40}\large~\faChild~~\faCoffee~~\faPencilSquareO~~\faBook}\\[0.5em]
+7--8 ~|~ 1h Start \\[0.5em] 
+\energyrate 
+
+\smalltimebox{\footnotesize 10--12 Deep Work}  
+
+\moodrate \\[0.2em]
+
+\smalltimebox{\footnotesize 14--16 Superficial~~}
+
+16--17 ~|~ 1h End   
+
+ \energyrate
+\end{tcolorbox}
+
+\vspace{-1.5em}
+\plannerheading{\normalsize ToDo} 
+\vspace{1.5em}
+
+\begin{tcolorbox}[colback=greyedout,colframe=greyedout]
+%\plannerheading{Work Winddown Routine}
+%\habitlabel{\textbf{\small Winddown~}} \\[0.1em]
+
+\smalltimebox{\footnotesize 20' Guilt} \smalltimebox{\footnotesize 20' Email} 
+\smalltimebox{\footnotesize 20' Admin} 
+\end{tcolorbox}
+\vspace{-1.5em}
+
+\plannerheading{\normalsize Mini-Journal} \vspace{-0.5em}
+{\tiny 
+\habitlabel{Today's successes} \\[1em]
+\habitlabel{What didn't work} \\[1em]
+\habitlabel{Gratitude}  
+}
+
+\plannerheading{\normalsize Daily Tracker}
+\habit{\large\faSmileO} \habit{\large\faLeaf} \habit{\large\faChild} % \habit{\faCutlery}
+\habit{\large\faCommentsO} \habit{\large\faApple}  \\[1em]
+\habit{\large\faPencilSquareO} \habit{\large\faCode} \habit{\large\faBook} 
+\habit{\large\faHashtag}\habit{\large\faMusic}
+
+
+
+\end{tcolorbox}
+
+}
+
+%--------------------------------------------------------------------------------------------
+% PERSONAL
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\dailyplan}{
+%\section{Plan for today}
+
+\begin{tcolorbox}[colback=greyedout,colframe=greyedout]
+%\plannerheading{Work Starting Routine} 
+\habitlabel{\textbf{START~}}
+%\habitlabel{Startup} 
+\batchtask{20' Learn} \batchtask{20' Progr} 
+\batchtask{20' Transl} \batchtask{20' Data} 
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=greyedout,colframe=greyedout]
+\plannerheading{Time Boxing with routines ~~ ~~~~ / ~~~~ ~~ / ~~~~~~~~~~ } 
+5--7 ~|~ 1,5h Morning Routine {\color{black!40}\large~\faChild~~\faCoffee~~\faPencilSquareO~~\faBook}\\[0.5em]
+7--8 ~|~ 1h Work Starting Routine \energyrating \\ 
+
+\texttt{<break/nap>}\\[0.5em]
+
+\timebox{10--12 Deep Work}  \\
+
+\texttt{<lunch>} \hspace{12.5em}\moodrating \\[0.5em]
+
+\timebox{14--16 Superficial~~} \\%[2em]
+
+16--17 ~|~ 1h Work Winddown Routine  \energyrating
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=greyedout,colframe=greyedout]
+%\plannerheading{Work Winddown Routine}
+\habitlabel{\textbf{Winddown~}}
+\batchtask{20' Guilt} \batchtask{20' Email} 
+\batchtask{20' Admin} 
+\end{tcolorbox}
+}
+
+%--------------------------------------------------------------------------------------------
+\newcommand{\dailyjournal}{
+%\section{Daily}
+\begin{minipage}[t]{0.45\textwidth}
+\habitlabel{Today's successes} \\[0.5em]
+\habitlabel{What didn't work} \\[0.5em]
+\habitlabel{Gratitude}  \\[0.5em]
+\habit{Highlight 90'} 
+\end{minipage}\hfill 
+\begin{minipage}[t]{0.45\textwidth}
+\plannerheading{Daily Tracker}
+\habit{\faSmileO} \habit{\faLeaf} \habit{\faChild} % \habit{\faCutlery}
+\habit{\faCommentsO} \habit{\faApple}  \\[1em]
+\habit{\faPencilSquareO} \habit{\faCode} \habit{\faBook} 
+\habit{\faHashtag}\habit{\faMusic}
+\end{minipage}
+}
+
+%--------------------------------------------------------------------------------------------
+\newcommand{\onedailypageprintout}{
+\dailyplan
+\dailyjournal\hrule
+\dailyplan
+\dailyjournal
+}
+
+
+
+%--------------------------------------------------------------------------------------------
+% INFOGRAPHICS
+%--------------------------------------------------------------------------------------------    
+\newcommand{\barrule}[3]{\hspace{0.5em}
+{\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
+}
+
+\newcommand{\progressarc}[8]{
+\begin{tikzpicture}
+\draw [line width=#1,#4] (0,#3)  arc[start angle=90,radius=#3,delta angle=-3.60*100]; 
+\draw [line width=#1,#2] (0,#3)  arc[start angle=90,radius=#3,delta angle=-3.60*#8]; 
+\node[align=center] at (0,0) {#5};
+\node[#7=#3+#1,align=center] at (0,0) {#6};
+
+\end{tikzpicture}
+}
+
+\newcommand{\hobbyicon}[5]{%
+\begin{tikzpicture}%
+\draw[draw=none,fill=#3] (0,0) circle (0.5);%
+\node[](icon) at (0,0) {\hspace{-0.5em}#4 #1};%
+\node[below=#5,align=center] at (icon) {#2};%
+\end{tikzpicture}
+}
+
+\newcommand{\icon}[3]{\phantom{x}{#3\color{#2}#1}\phantom{x}}
+\newcommand{\pictofraction}[6]{%
+\pgfmathparse{#3 - 1}\foreach \n in {0,...,\pgfmathresult}{\icon{#1}{#2}{#6}}%
+\pgfmathparse{#5 - 1}\foreach \n in {0,...,\pgfmathresult}{\icon{#1}{#4}{#6}}%
+}
+
+%--------------------------------------------------------------------------------------------
+% FOOTER
+%--------------------------------------------------------------------------------------------
+\usepackage{lastpage}
+\usepackage{fancyhdr} % http://mirror.easyname.at/ctan/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+ 
+\fancypagestyle{pagenumbering}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+% add the page count in the middle: \thepage gives you the current page, \pageref{LastPage} the total
+\cfoot{\thepage/\pageref{LastPage}}
+\lfoot{\color{black!40}\textsc{Planner $\cdot$ Template}}
+\rfoot{\vspace{-10mm}\includegraphics[width=0.1\textwidth]{logo.png}} % \roundpic{ninja.png}
+}%
+
+
+
+%--------------------------------------------------------------------------------------------
+% GREYED OUT BOXES
+%--------------------------------------------------------------------------------------------    
+
+\newcommand{\dailybox}[2]{ % heading in upper left corner
+\begin{tcolorbox}[colback=lightgrey,colframe=lightgrey,sharp corners]\plannerheading{#1} %\\[0.5em]
+\vspace{#2}\end{tcolorbox}%
+}
+%--------------------------------------------------------------------------------------------
+\newcommand{\weekofboxes}{
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{MON \datefield}{6em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{TUES \datefield}{6em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{WED \datefield}{6em}
+\end{minipage}\\ 
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{THUR \datefield}{6em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{FRI \datefield}{6em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{SAT \datefield}{6em}
+\end{minipage} \\
+\begin{minipage}[t]{\textwidth}
+\dailybox{SUN \datefield}{4em}
+\end{minipage}
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\lastweekoftwentyonedays}{
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{\_\_\_ \datefield}{6em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{\_\_\_  \datefield}{6em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\dailybox{\_\_\_  \datefield}{6em}
+\end{minipage}\\ 
+\begin{minipage}[t]{\textwidth}
+\dailybox{Time Off (6 Days)}{4em}
+\end{minipage}
+}
+%--------------------------------------------------------------------------------------------
+\newcommand{\overviewboxes}[2]{
+\plannerheading{#1}
+\numberofboxes{\dailybox{}{1em}}{#2} \\
+\numberofboxes{\dailybox{}{1em}}{#2} \\
+\numberofboxes{\dailybox{}{1em}}{#2}
+\vspace{3em}
+}
+
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\eisenhower}{%
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{{\footnotesize Urgent \& important:}\newline Do it now}{8em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{{\footnotesize Important but not urgent:}\newline Plan}{8em}
+\end{minipage}\\ 
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{{\footnotesize Urgent \& not important:}\newline Delegate}{8em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{{\footnotesize Unimportant \& not urgent:}\newline Delete}{8em}
+\end{minipage} \\
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\goalplanning}{%
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{1 Month}{8em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{3 Months}{8em}
+\end{minipage}\\ 
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{1 Year}{8em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{3 Years}{8em}
+\end{minipage} \\
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\traveladventures}{%
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{\faGlobe~ places to go}{3em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{\faLocationArrow~ things to visit}{3em}
+\end{minipage}\\ 
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{\faHeartO~ things to do}{3em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{\faUsers~ people to see}{3em}
+\end{minipage} \\
+}
+
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\reviewboxes}{%
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{GOALS}{10em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{ACHIEVEMENTS}{10em}
+\end{minipage}\\ 
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{WHY}{4em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{REWARD}{4em}
+\end{minipage} \\
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\ninetydayproject}{%
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{1st 21-day sprint}{10em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{2nd 21-day sprint}{10em}
+\end{minipage}\\ 
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{3rd 21-day sprint}{10em}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\dailybox{HOLIDAY / Mini-Retirement}{10em}
+\end{minipage} \\
+
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\twentyonedayprojectOneMonth}{
+\section{Monthly Planner for 21 Day Goal Sprint}
+
+\vspace{2em}
+
+\plannerheading{Week 1 ~/~ Weekly Goal}
+\weekofboxes 
+\vspace{3em}
+
+
+\plannerheading{Week 2 ~/~ Weekly Goal}
+\weekofboxes
+\vspace{3em}
+
+\newpage 
+\vspace{2em}
+
+\plannerheading{Week 3 ~/~ Weekly Goal}
+\weekofboxes 
+\vspace{3em}
+
+\plannerheading{Week 4 ~/~ Weekly Goal}
+\lastweekoftwentyonedays
+}
+%--------------------------------------------------------------------------------------------
+
+\newcommand{\numberofboxes}[2]{
+\pgfmathparse{((100/#2)/100)-(0.01)} 
+\let\minipagesize\pgfmathresult
+%\pgfmathparse{#2 - 1}
+\foreach \n in {1,...,#2}{%
+\begin{minipage}[t]{\minipagesize\textwidth}
+#1
+\end{minipage}\hfill 
+}
+}
+%--------------------------------------------------------------------------------------------
+
