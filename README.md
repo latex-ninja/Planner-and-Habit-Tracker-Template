@@ -1,3 +1,5 @@
+Would you like to start some sort of habit tracking routine but #bujo is too much work, yet planners you can buy include too many elements you don't need? Then I thought this is a job for a LaTeX template ;)
+
 # Planner and Habit Tracker Template
 A template to help you create your own custom daily planner or habit tracking system.
 Depending on what you need from it, just print selected pages. For example, if you wanted to use the weekly templates together with the monthly overview, you will want to print the weekly overview for each week of the month and so on.  
