@@ -38,6 +38,34 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 ![Template for 20h to learn anything](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-04.png)
 
 ## 100 Day Challenge Tracker Template
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>100 Day Challenge Tracker Template: Overview Page</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-05.png" 
+				alt="100 Day Challenge Tracker Template: Overview Page"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>100 Day Challenge Tracker Template: 10 Day Sub-Projects</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-06.png" 
+				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+
 ### Overview Page
 ![100 Day Challenge Tracker Template: Overview Page](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-05.png)
 
@@ -46,10 +74,39 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 
 
 ## 21/90 Project Template
+
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>21/90 Project Template: Overview</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-16.png" 
+				alt="100 Day Challenge Tracker Template: Overview Page"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>21/90 Project Template: Progress Calender</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-17.png" 
+				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+
 ### Overview
 ![21/90 Project Template: Overview](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-16.png)
 
 ### Progress Calender (print out to check off the boxes and hang it on the wall or whatever)
-![21/90 Project Template: Progress Calender](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-16.png)
+![21/90 Project Template: Progress Calender](https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-17.png)
 
 
