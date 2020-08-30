@@ -118,7 +118,7 @@ How to use:
 * add your own notes, best using a pen with a sharp tip. For example like a Pigma Micron 01.
 * use a highlight pen for better contrast or visualization.
 * also use highlighter to check off boxes as done by colouring them in.
-* 
+
 
 ---
 
