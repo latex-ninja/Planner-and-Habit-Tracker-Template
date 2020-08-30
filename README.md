@@ -41,7 +41,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th><code>100 Day Challenge Tracker Template: Overview Page</code></th>
+		<th><code>Overview Page</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -54,7 +54,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th><code>100 Day Challenge Tracker Template: 10 Day Sub-Projects</code></th>
+		<th><code>10 Day Sub-Projects</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -78,7 +78,7 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th><code>21/90 Project Template: Overview</code></th>
+		<th><code>Overview</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -86,10 +86,12 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 				alt="100 Day Challenge Tracker Template: Overview Page"
 				height="300"/>
 		</td>
-	</tr>	
-	
-		<tr>
-		<th><code>21/90 Project Template: Progress Calender</code></th>
+	</tr>			
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>Progress Calender</code></th>
 	</tr>
 	<tr>
 		<td>
@@ -97,9 +99,8 @@ Print it out, fill it out and maybe share your experiences with it, so we can up
 				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
 				height="300"/>
 		</td>
-	</tr>		
+	</tr>			
 </table>
-
 
 
 ### Overview
