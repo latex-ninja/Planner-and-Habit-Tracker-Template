@@ -48,7 +48,7 @@ But the main purpose of this being a LaTeX template is, of course, that you can 
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th><code>Overview Page</code></th>
+		<th><code>100DaysofX Overview Page</code></th>
 		<th><code>10 Day Sub-Projects</code></th>
 	</tr>
 	<tr>
@@ -68,7 +68,7 @@ But the main purpose of this being a LaTeX template is, of course, that you can 
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th><code>Overview</code></th>
+		<th><code>2190 project: Overview</code></th>
 		<th><code>Progress Calender</code></th>
 	</tr>
 	<tr>
