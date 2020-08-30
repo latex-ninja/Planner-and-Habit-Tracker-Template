@@ -122,9 +122,9 @@ How to use:
 
 ---
 
-Use the template to make it your own and adopt it to your needs. Or just use it as is-
+Use the template to make it your own and adopt it to your needs. Or just use it as is.
 
-Print it out, fill it out and maybe share your experiences with it, so we can update it to make it even better :)
+Print it out, fill it out and maybe share your experiences with it, so I can update it to make it even better :)
 
 ---
 
