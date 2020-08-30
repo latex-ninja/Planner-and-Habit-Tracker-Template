@@ -1,3 +1,85 @@
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>Weekdays Sheet</code></th>
+		<th><code>Weekly Overview</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-01.png" 
+				alt="Weekdays Sheet"
+				height="300"/>
+		</td>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-02.png" 
+				alt="Weekly Overview"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>Monthly Overview</code></th>
+		<th><code>Template for 20h to learn anything</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-03.png" 
+				alt="Monthly Overview"
+				height="300"/>
+		</td>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-04.png" 
+				alt="Template for 20h to learn anything"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>Overview Page</code></th>
+		<th><code>10 Day Sub-Projects</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-05.png" 
+				alt="100 Day Challenge Tracker Template: Overview Page"
+				height="300"/>
+		</td>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-06.png" 
+				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th><code>Overview</code></th>
+		<th><code>Progress Calender</code></th>
+	</tr>
+	<tr>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-16.png" 
+				alt="100 Day Challenge Tracker Template: Overview Page"
+				height="300"/>
+		</td>
+		<td>
+			<img src="https://github.com/latex-ninja/Planner-and-Habit-Tracker-Template/blob/master/img/plannertemplate-17.png" 
+				alt="100 Day Challenge Tracker Template: 10 Day Sub-Projects"
+				height="300"/>
+		</td>
+	</tr>			
+</table>
+
+
+---
+
 # Planner and Habit Tracker Template
 A template to help you create your own custom daily planner or habit tracking system.
 Depending on what you need from it, just print selected pages. For example, if you wanted to use the weekly templates together with the monthly overview, you will want to print the weekly overview for each week of the month and so on.  
